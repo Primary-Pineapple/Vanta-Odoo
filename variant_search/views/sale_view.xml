@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+        <record id="variant_search_view_order_form" model="ir.ui.view">
+            <field name="name">sale.order.form.view</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="arch" type="xml">
+                <data>
+                    <xpath expr="//field[@name='order_line']/tree/field[@name='product_template_id']" position="before">
+                        <field name="product_id"/>
+                    </xpath>
+                    <xpath expr="//field[@name='order_line']/tree/field[@name='product_template_id']" position="attributes">>
+                         <attribute name="invisible">1</attribute>
+                    </xpath>
+                </data>
+            </field>
+        </record>
+
+</odoo>
