@@ -13,7 +13,7 @@ def _post_init_hook(env):
 
     users_model = env['res.users']
 
-    values = [(4, user.id) for user in users_model.search([])]
+    values = [(4, user.id) for user in users_model.search([]) if user.has_group('base.group_user')]
     env.ref('ventor_base.ventor_role_admin').users = values
 
     env.cr.execute(
