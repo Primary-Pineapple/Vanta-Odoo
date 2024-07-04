@@ -1,0 +1,5 @@
+/** SUPRESS POWERED BY VIEW
+
+<xpath expr="//div[5]" position="replace">
+
+</xpath>
