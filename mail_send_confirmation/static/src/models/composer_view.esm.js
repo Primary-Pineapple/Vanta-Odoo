@@ -18,7 +18,7 @@ patch(Composer.prototype, {
         if (this.props.type === "message") {
             this.dialogService.add(ConfirmationDialog, {
                 body: _t(
-                    "Whoa! This is an EMAIL, not a log note. Are you sure you want to send this? The external customer/supplier will receive it."
+                    "Wait! You're about to send an email! This is not a log note. Are you sure you want to send this? The external customer/supplier will receive it."
                 ),
                 confirm: async () => {
                     super.sendMessage();
